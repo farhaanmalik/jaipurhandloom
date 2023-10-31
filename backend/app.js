@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 
 const errorMiddleware = require("./middleware/error");
 
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
@@ -18,8 +19,6 @@ app.use(function(req, res, next) {
 const product = require("./routes/productRoute");
 const user = require("./routes/userRoute");
 const order = require("./routes/orderRoute")
-
-app.use(cors());
 
 app.use("/api/v1", product);
 app.use("/api/v1", user);
