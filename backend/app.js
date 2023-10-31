@@ -5,7 +5,13 @@ const cookieParser = require("cookie-parser");
 
 const errorMiddleware = require("./middleware/error");
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://jaipurhandloom.vercel.app/"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
+  }
+));
 
 app.use(express.json());
 app.use(cookieParser());
