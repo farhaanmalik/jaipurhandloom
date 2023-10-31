@@ -7,7 +7,7 @@ const errorMiddleware = require("./middleware/error");
 
 app.use(cors(
   {
-    origin: ["https://jaipurhandloom.vercel.app/"],
+    origin: ["https://jaipurhandloom.vercel.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
   }
