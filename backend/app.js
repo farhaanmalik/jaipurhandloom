@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 const cookieParser = require("cookie-parser");
 
@@ -17,6 +18,8 @@ app.use(function(req, res, next) {
 const product = require("./routes/productRoute");
 const user = require("./routes/userRoute");
 const order = require("./routes/orderRoute")
+
+app.use(cors());
 
 app.use("/api/v1", product);
 app.use("/api/v1", user);
