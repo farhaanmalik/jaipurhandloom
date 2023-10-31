@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const connectDatabase = () => {
   mongoose
-    .connect("mongodb+srv://farhaan:1kHeohoMZ5oK0cK6@cluster0.cq8jb4q.mongodb.net/Ecommerce?retryWrites=true&w=majority", {
+    .connect(process.env.DB_KEY, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
