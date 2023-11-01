@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "frontend", "use": "@vercel/static" },
+    { "src": "backend/server.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "backend/server.js" },
+    { "src": "/(.*)", "dest": "frontend/index.html" }
+  ],
+  "env": {
+    "MONGODB_URI": "@cluster0.cq8jb4q.mongodb.net"
+  }
+}
