@@ -7,8 +7,5 @@
   "routes": [
     { "src": "/api/(.*)", "dest": "backend/server.js" },
     { "src": "/(.*)", "dest": "frontend/index.html" }
-  ],
-  "env": {
-    "MONGODB_URI": "@cluster0.cq8jb4q.mongodb.net"
-  }
+  ]
 }
